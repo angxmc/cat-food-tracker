@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cat Food Tracker</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <h1>🐱 Cat Food Tracker</h1>
+
+    <label for="weight">Cat Weight:</label>
+    <input type="number" id="weight" step="0.1" />
+    <select id="unit">
+      <option value="kg">kg</option>
+      <option value="lbs">lbs</option>
+    </select>
+    <br /><br />
+
+    <label>Body Condition:</label><br />
+    <input type="radio" name="condition" value="underweight" />
+    Underweight<br />
+    <input type="radio" name="condition" value="ideal" /> Ideal<br />
+    <input type="radio" name="condition" value="overweight" />
+    Overweight<br /><br />
+
+    <!-- New Section for Food Brand/Product Selections -->
+    <h2>Select Food Ratio & Products</h2>
+    <label for="foodRatio">Select Food Ratio:</label>
+    <select id="foodRatio">
+      <option value="100wet">100% Wet</option>
+      <option value="100dry">100% Dry</option>
+      <option value="50/50">50/50 Wet/Dry</option>
+      <option value="30/70">30% Wet / 70% Dry</option>
+      <option value="20/80">20% Wet / 80% Dry</option>
+      <option value="10/90">10% Wet / 90% Dry</option>
+    </select>
+    <br /><br />
+
+    <label for="wetCal">Wet Food - Calories per gram:</label>
+    <input type="number" id="wetCal" step="0.1" /><br /><br />
+
+    <label for="dryCal">Dry Food - Calories per gram:</label>
+    <input type="number" id="dryCal" step="0.1" /><br /><br />
+
+    <button onclick="calculateCalories()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script src="/client/src/services/calculateCalories.js"></script>
+  </body>
+</html>
